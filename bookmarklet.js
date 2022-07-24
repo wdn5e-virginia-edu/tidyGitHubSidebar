@@ -1,6 +1,6 @@
 (function organizeGithubSidebar() {
 	'use strict';
-	
+
 	/*REMOVE ANY H2 FROM PREVIOUS BOOKMARKLET RUN*/
 	for (let h2 of document.querySelectorAll('h2.github-sidecar-bookmarklet')) {
 		h2.remove();
@@ -8,7 +8,7 @@
 	const ulQuerySelector = 'aside div.js-repos-container div.js-repos-container ul';
 	const lisObject = { };
 	const ulsObject = { };
-	
+
 	/*FIXUP EACH LI, DETERMINE WHICH ULS ARE NEEDED*/
 	for (let li of document.querySelectorAll(ulQuerySelector + ' li')) {
 		const liKey = li.dataset.liKey || li.innerText.trim();
@@ -17,24 +17,26 @@
 			const ulKey = parts[0];
 			ulsObject[ulKey] = null; /*fill this empty slot below*/
 			lisObject[liKey] = li;
-			li.querySelector('li div div a').innerText = parts[1];
+			li.querySelector('li div div a').innerHtml =
+				`<span style=\"display:none;\">${parts[0]}/</span>${parts[1]}`;
+				/*allows filtering to continue over full label*/
 			li.dataset.liKey = liKey;
 		}
-	}	
+	}
 	const ulKeys = Object.keys(ulsObject).sort();
-	
+
 	/*ADD ANY ADDITIONAL ULS NEEDED*/
 	const uls0 = document.querySelector(ulQuerySelector);
 	for (let i = document.querySelectorAll(ulQuerySelector).length; i < ulKeys.length; i += 1) {
 		uls0.before(uls0.cloneNode());
 	}
 	const uls = document.querySelectorAll(ulQuerySelector);
-	
+
 	/*ASSIGN EACH UL A KEY IN ORDER*/
 	for (let i = 0; i < ulKeys.length; i += 1) {
 		ulsObject[ ulKeys[i] ] = uls[i]; /*fill empty slot made above*/
 	}
-	
+
 	/*MOVE EACH LI TO ITS CORRESPONDING UL*/
 	for (let liKey of Object.keys(lisObject).sort()) {
 		const parts = liKey.split('/');
@@ -45,7 +47,7 @@
 			ul.append(li);
 		}
 	}
-	
+
 	/*REMOVE ANY UL WITH EMPTY LI; PREPEND LABELING H2*/
 	const h2_template = document.querySelector('h2').cloneNode();
 	h2_template.classList.add('github-sidecar-bookmarklet');
@@ -54,9 +56,9 @@
 		const ul = uls[i];
 		const lis = ul.querySelectorAll('li');
 		if (lis && lis.length > 0) {
-			const ulKey = ulKeys[i];		
+			const ulKey = ulKeys[i];
 			const h2 = h2_template.cloneNode();
-			h2.innerText = ulKey;			
+			h2.innerText = ulKey;
 			ul.before(h2);
 		} else {
 			const pES = ul.previousElementSibling;

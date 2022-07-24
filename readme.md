@@ -11,11 +11,12 @@ to bookmark the bookmarklet in your browser and for usage notes.
 ## code minimization
 - [minimized javascript](bookmarklet.min.js)
 - replaces  with a single space
-	- // line-ending comments
-	- /* */ comments spanning multiple lines
-	- line endings
+	- any line-ending // comments
+	- any /* */ comment spanning multiple lines
+	- any /* */ single-line comment without any code on that line
+	- line ending
 - then reduces consecutive whitespace characters to a single space
-- (would retain /* */ comments among code on a single line)
+- (would retain any /* */ single-line comment with some code also on that line)
 
 ## how it works
 ### GitHub's HTML
