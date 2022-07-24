@@ -19,7 +19,7 @@
 			lisObject[liKey] = li;
 			/*allow Find a repository... filter to continue to work over list items' full labels*/
 			const a = li.querySelector('li div div a');
-			const span = document.createElemnt('span');
+			const span = document.createElement('span');
 			span.style.display = 'none';
 			span.innerText = parts[0];
 			while (a.firstChild) {
