@@ -17,9 +17,15 @@
 			const ulKey = parts[0];
 			ulsObject[ulKey] = null; /*fill this empty slot below*/
 			lisObject[liKey] = li;
-			li.querySelector('li div div a').innerHtml =
-				`<span style=\"display:none;\">${parts[0]}/</span>${parts[1]}`;
-				/*allows filtering to continue over full label*/
+			/*allow Find a repository... filter to continue to work over list items' full labels*/
+			const a = li.querySelector('li div div a');
+			const span = document.createElemnt('span');
+			span.style.display = 'none';
+			span.innerText = parts[0];
+			while (a.firstChild) {
+				a.removeChild(a.firstChild);
+			}
+			a.append(span, `/${parts[1]}`);
 			li.dataset.liKey = liKey;
 		}
 	}
