@@ -4,12 +4,12 @@ See the [index page](https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/)
 to bookmark the bookmarklet in your browser and for usage notes.
 
 ## code
-- [full javascript](https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/bookmarklet.js)
+- [full javascript](bookmarklet.js)
 - code files are named *.js so text editors detect syntax
 - they aren't intended for standalone use
 
 ## code minimization
-- [minimized javascript](https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/bookmarklet.min.js)
+- [minimized javascript](bookmarklet.min.js)
 - replaces  with a single space
 	- // line-ending comments
 	- /* */ comments spanning multiple lines
