@@ -1,18 +1,25 @@
-#code for this bookmarklet
-Here is the [full javascript](https://pages.github.com/)
+# tidyGitHubSidebar
+To bookmark the bookmarklet and for usage notes
+see the [index page](https://pages.github.com/).
 
-Here is the [minimized javascript](https://pages.github.com/)
-, with the javascript: "protocol" not yet added.
-
-##To minimize the code,
-###I removed
-* multi-line /* */ comments ,retaining any non-commentedcode on the first and final lines
-* single-line /* */ comments with no code on the line
-* single-line end-of-line // comments
-* blank lines of any kind
-* line breaks
-###but retained:
-* any single-line /* */ comments with code on the line (in current case, I don't think there are any)
-* whitespace within lines, as-is (to be cautious)
-
-The bookmarklet link and usage notes are on the [index page](https://pages.github.com/)
+## view the code as
+- [full javascript](https://pages.github.com/)
+- [minimized javascript](https://pages.github.com/)
+- named *.js so text editors detect syntax
+- not intended for standalone use
+## minimization
+### removes
+- /* */ comments
+	- spanning multiple lines
+	- filling one complete line
+- // line-ending comments
+- blank lines of any kind
+- line breaks
+### retains
+- all else, specifically:
+- /* */ comments
+	- within one line
+	- among code
+	- (in current case, I don't think there are any of these)
+- whitespace within lines
+	- kept as-is to be cautious
