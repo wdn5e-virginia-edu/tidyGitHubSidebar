@@ -29,7 +29,7 @@ to bookmark the bookmarklet in your browser and for usage notes.
 
 #### there may also be a _&nbsp;Show more&nbsp;_ link beneath that
 - clicking on that link adds more list items into a new unlabeled list
-- using the _&nbsp;Find a repository...&nbsp;_ text entry also does this
+- using the _&nbsp;Find a repository...&nbsp;_ filter also does this
 
 
 ### what this bookmarklet changes
