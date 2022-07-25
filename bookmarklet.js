@@ -21,11 +21,11 @@
 			const a = li.querySelector('li div div a');
 			const span = document.createElement('span');
 			span.style.display = 'none';
-			span.innerText = parts[0];
+			span.innerText = `${parts[0]}/`;
 			while (a.firstChild) {
 				a.removeChild(a.firstChild);
 			}
-			a.append(span, `/${parts[1]}`);
+			a.append(span, parts[1]);
 			li.dataset.liKey = liKey;
 		}
 	}
