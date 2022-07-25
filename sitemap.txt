@@ -1,0 +1,6 @@
+https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/
+https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/bookmarklet.js
+https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/bookmarklet.min.js
+https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/readme.md
+https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/robots.txt
+https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/sitemap.txt

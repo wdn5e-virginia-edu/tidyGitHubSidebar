@@ -1,0 +1,2 @@
+User-agent: *
+sitemap: https://wdn5e-virginia-edu.github.io/tidyGitHubSidebar/sitemap.txt
